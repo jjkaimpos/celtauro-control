@@ -1,0 +1,111 @@
+/* * 1. RESET BÁSICO Y FUENTE
+ */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Fondo oscuro (vistoso) */
+    color: #ecf0f1; /* Texto claro */
+}
+
+/* * 2. CABECERA Y PIE DE PÁGINA
+ */
+header {
+    background-color: #e74c3c; /* Color de acento (rojo vibrante) */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la Cabecera (para páginas internas) */
+.logo-header {
+    max-width: 60%; /* Logo más pequeño en páginas internas */
+    height: auto;
+}
+
+main {
+    padding: 1rem;
+}
+section {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #bdc3c7;
+}
+
+/* * 3. ESTILOS DE BOTONES (General)
+ */
+.button {
+    display: block; /* Ocupa todo el ancho en el móvil */
+    text-align: center;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none; /* Quita el subrayado */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    opacity: 0.9;
+}
+
+/* Colores de los botones de CUOTAS */
+.primary { background-color: #3498db; color: white; }
+.success { background-color: #2ecc71; color: white; } /* Verde para PAGADO */
+.warning { background-color: #f1c40f; color: #2c3e50; } /* Amarillo/Naranja para PENDIENTE */
+
+/* ESTILOS DE LA PÁGINA PRINCIPAL (index.html) */
+.home-page {
+    background-color: #2c3e50; /* Fondo oscuro */
+}
+.home-container {
+    padding: 0; /* Quitamos padding para que la foto llegue a los bordes */
+}
+.main-photo {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+    border-bottom: 5px solid #e74c3c; /* Detalle de color */
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.main-menu {
+    padding: 0 1rem; /* Padding a los lados para que los botones no peguen al borde */
+}
+
+/* Paleta de colores extendida para los botones del menú principal */
+.menu-button {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+.secondary { background-color: #9b59b6; color: white; } /* Púrpura */
+.tertiary { background-color: #1abc9c; color: white; } /* Turquesa */
+.quaternary { background-color: #f39c12; color: white; } /* Naranja */
+.quintary { background-color: #34495e; color: white; } /* Gris oscuro */
+
+/* ESTILOS DE LA NAVEGACIÓN INTERNA (Botón Volver) */
+.nav-back {
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.back-button {
+    background-color: #bdc3c7; /* Gris claro */
+    color: #2c3e50;
+    display: inline-block; /* Vuelve a ser un botón pequeño */
+    width: auto;
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+}
