@@ -260,3 +260,65 @@ main {
     border-radius: 8px;
     margin-bottom: 20px;
 }
+
+/* * 6. ESTILOS PARA LA SECCIÓN DE AUDIOS (MODIFICADO) */
+
+.audio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.audio-item {
+    background-color: #34495e; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- NUEVAS REGLAS PARA LA MINIATURA --- */
+.track-details {
+    display: flex; /* Activa Flexbox para poner imagen y texto lado a lado */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #4a657e;
+    padding-bottom: 15px;
+}
+
+.track-thumbnail {
+    width: 60px; /* Tamaño de la miniatura en móvil */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex-shrink: 0; /* Asegura que la imagen no se encoja */
+}
+
+.track-info {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+.track-info h3 {
+    /* Ajustamos h3 para que encaje mejor con la miniatura */
+    color: #ecf0f1; 
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+    border: none; /* Quitamos la línea inferior que teníamos antes en h3 */
+    font-family: Arial, sans-serif; 
+}
+
+.track-info p {
+    color: #bdc3c7;
+    font-size: 0.8rem;
+    margin: 3px 0 0 0;
+}
+/* ------------------------------------- */
+
+
+.audio-item audio {
+    width: 100%; 
+    display: block;
+    margin-top: 10px;
+}
