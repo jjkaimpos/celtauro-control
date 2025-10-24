@@ -251,3 +251,12 @@ main {
     min-height: calc(100vh - 100px); /* Asegura que el main ocupe casi toda la altura */
 }
 
+/* --- ESTILOS DE LA PÁGINA DE INICIO --- */
+
+.main-photo {
+    width: 100%; /* La imagen siempre ocupará el 100% del ancho del contenedor */
+    /* max-height: 250px; /* Limita la altura máxima para que no sea inmensa */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
