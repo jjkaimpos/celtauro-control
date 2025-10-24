@@ -1,111 +1,253 @@
-/* * 1. RESET BÁSICO Y FUENTE
- */
+/*
+==================================================
+  ARCHIVO: style.css
+  PROYECTO: CELTAURO GESTIÓN (Móvil First)
+==================================================
+*/
+
+/* ------------------- 1. ESTILOS GLOBALES Y TIPOGRAFÍA ------------------- */
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    /* Fuente Celta/Medieval (IM Fell Double Pica) */
+    font-family: 'IM Fell Double Pica', Georgia, serif;
+    background-color: #2c3e50; /* Fondo Azul Oscuro */
+    color: #ecf0f1; /* Texto Blanco/Claro */
     margin: 0;
     padding: 0;
-    background-color: #2c3e50; /* Fondo oscuro (vistoso) */
-    color: #ecf0f1; /* Texto claro */
-}
-
-/* * 2. CABECERA Y PIE DE PÁGINA
- */
-header {
-    background-color: #e74c3c; /* Color de acento (rojo vibrante) */
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos de la Cabecera (para páginas internas) */
-.logo-header {
-    max-width: 60%; /* Logo más pequeño en páginas internas */
-    height: auto;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
 main {
-    padding: 1rem;
+    padding: 20px;
+    max-width: 600px; /* Limita el ancho en pantallas grandes */
+    margin: 0 auto;
 }
-section {
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-footer {
+
+header {
+    background-color: #e74c3c; /* Rojo Ladrillo para la cabecera */
+    padding: 10px 0;
     text-align: center;
-    padding: 1rem;
-    font-size: 0.8rem;
-    color: #bdc3c7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* * 3. ESTILOS DE BOTONES (General)
- */
-.button {
-    display: block; /* Ocupa todo el ancho en el móvil */
-    text-align: center;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    border-radius: 5px;
-    text-decoration: none; /* Quita el subrayado */
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-.button:hover {
-    opacity: 0.9;
-}
-
-/* Colores de los botones de CUOTAS */
-.primary { background-color: #3498db; color: white; }
-.success { background-color: #2ecc71; color: white; } /* Verde para PAGADO */
-.warning { background-color: #f1c40f; color: #2c3e50; } /* Amarillo/Naranja para PENDIENTE */
-
-/* ESTILOS DE LA PÁGINA PRINCIPAL (index.html) */
-.home-page {
-    background-color: #2c3e50; /* Fondo oscuro */
-}
-.home-container {
-    padding: 0; /* Quitamos padding para que la foto llegue a los bordes */
-}
-.main-photo {
-    width: 100%; /* Ocupa todo el ancho */
+.logo-header {
+    max-width: 180px;
     height: auto;
     display: block;
-    margin-bottom: 1.5rem;
-    border-bottom: 5px solid #e74c3c; /* Detalle de color */
+    margin: 0 auto;
 }
-.subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
+
+h2 {
+    font-family: 'IM Fell Double Pica', Georgia, serif;
+    color: #e74c3c; /* Rojo Ladrillo */
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 5px;
+}
+
+p {
     margin-bottom: 1rem;
 }
-.main-menu {
-    padding: 0 1rem; /* Padding a los lados para que los botones no peguen al borde */
+
+
+/* ------------------- 2. ESTILOS DE NAVEGACIÓN Y BOTONES ------------------- */
+
+.nav-grid {
+    display: grid;
+    /* 2 columnas en móvil */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+    padding: 20px 0;
 }
 
-/* Paleta de colores extendida para los botones del menú principal */
-.menu-button {
-    font-size: 1.1rem;
+.button, .song-title {
+    /* Mantiene la legibilidad en botones */
+    font-family: Arial, sans-serif; 
+    display: block;
     padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
     margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.2s ease;
 }
-.secondary { background-color: #9b59b6; color: white; } /* Púrpura */
-.tertiary { background-color: #1abc9c; color: white; } /* Turquesa */
-.quaternary { background-color: #f39c12; color: white; } /* Naranja */
-.quintary { background-color: #34495e; color: white; } /* Gris oscuro */
 
-/* ESTILOS DE LA NAVEGACIÓN INTERNA (Botón Volver) */
-.nav-back {
-    padding: 0 1rem 1rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Estilo para los botones de la página de inicio */
+.button-link {
+    background-color: #34495e; /* Azul oscuro */
+    color: #ffffff;
+    font-size: 1rem;
 }
+
+.button-link:hover {
+    background-color: #46627d;
+}
+
+/* Botón de volver */
 .back-button {
-    background-color: #bdc3c7; /* Gris claro */
-    color: #2c3e50;
-    display: inline-block; /* Vuelve a ser un botón pequeño */
-    width: auto;
-    padding: 0.5rem 1rem;
-    margin-top: 0;
+    background-color: #7f8c8d; /* Gris */
+    color: #ffffff;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
 }
+
+.back-button:hover {
+    background-color: #95a5a6;
+}
+
+/* --- ESTILOS DE BOTONES ESPECÍFICOS DE CUOTAS Y LETRAS (COLORES) --- */
+
+/* Botón para Añadir Cuota */
+.button.primary {
+    background-color: #1abc9c; /* Turquesa */
+    color: #ffffff;
+}
+.button.primary:hover {
+    background-color: #16a085;
+}
+
+/* Botón para Ver Pagados (Éxito) */
+.button.success {
+    background-color: #27ae60; /* Verde Éxito */
+    color: #ffffff;
+}
+.button.success:hover {
+    background-color: #2ecc71;
+}
+
+/* --- CONTINUACIÓN DE ESTILOS DE BOTONES ESPECÍFICOS DE CUOTAS Y LETRAS (COLORES) --- */
+
+/* Botón PRIMARY (Ya existe: Azul) */
+.button.primary {
+    background-color: #3498db; 
+    color: #ffffff;
+}
+.button.primary:hover {
+    background-color: #2980b9; 
+}
+
+/* Botón SECONDARY (Ya existe: Verde) */
+.button.secondary {
+    background-color: #2ecc71; 
+    color: #ffffff;
+}
+.button.secondary:hover {
+    background-color: #27ae60; 
+}
+
+/* Botón TERTIARY (Ya existe: Naranja) */
+.button.tertiary {
+    background-color: #f39c12; 
+    color: #ffffff;
+}
+.button.tertiary:hover {
+    background-color: #e67e22; 
+}
+
+/* 4. Nuevo: Botón QUATERNARY (Ej: Morado) */
+.button.quaternary {
+    background-color: #9b59b6; 
+    color: #ffffff;
+}
+.button.quaternary:hover {
+    background-color: #8e44ad; 
+}
+
+/* 5. Nuevo: Botón QUINTARY (Ej: Rojo Oscuro) */
+.button.quintary {
+    background-color: #e74c3c; 
+    color: #ffffff;
+}
+.button.quintary:hover {
+    background-color: #c0392b; 
+}
+
+/* 6. Nuevo: Botón SENARY (Ej: Turquesa) */
+.button.senary {
+    background-color: #1abc9c; 
+    color: #ffffff;
+}
+.button.senary:hover {
+    background-color: #16a085; 
+}
+
+/* ------------------- 4. ESTILOS PARA LA GALERÍA DE IMÁGENES ------------------- */
+
+.galeria-grid {
+    display: grid;
+    /* En móvil, una columna; en pantallas más grandes, dos. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 15px; 
+    padding: 10px 0;
+}
+
+.galeria-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.galeria-item:hover {
+    transform: scale(1.02);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; 
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    pointer-events: none; 
+}
+
+/* ------------------- 5. ESTILOS DE FOOTER ------------------- */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    background-color: #2c3e50;
+}
+
+/* MEDIA QUERY para tabletas y escritorios pequeños */
+@media (min-width: 480px) {
+    .nav-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en pantallas más anchas */
+    }
+}
+
+/* --- ESTILOS GLOBALES Y TIPOGRAFÍA --- */
+/* ... (reglas body, header, etc. anteriores) ... */
+
+main {
+    padding: 20px;
+    max-width: 600px; 
+    margin: 0 auto;
+    /* --- Nuevo: Flexbox para centrado vertical --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente dentro del main */
+    min-height: calc(100vh - 100px); /* Asegura que el main ocupe casi toda la altura */
+}
+
